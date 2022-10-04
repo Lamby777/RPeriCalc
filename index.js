@@ -1,7 +1,5 @@
-console.log(rectanglesWithPerimeter(3, 3, 4));
+console.log(rectanglesWithPerimeter(3, 3, 8));
 //console.log(rectanglesWithPerimeter(35,14));
-
-console.log(hFromWP(1, 4));
 
 function rectanglesWithPerimeter(rx, ry, peri) {
 	let sum = 0;
@@ -10,10 +8,17 @@ function rectanglesWithPerimeter(rx, ry, peri) {
 		// Get height from width and perimeter
 		const innerH = hFromWP(innerW, peri);
 
-		// Skip to next if height isn't a whole number
-		if (isWhole(innerH)) {
+		// Skip to next if height can't be found
+		if (isWhole(innerH) && (innerH > 0)) {
 			// width * calculated height
-			sum += (innerW*innerH);
+			const res = (
+				(rx-innerW) +
+				(ry-innerH)
+			);
+
+			console.log(`Res for ${innerW} and ${innerH} is ${res}`);
+
+			sum += res;
 		}
 	}
 
