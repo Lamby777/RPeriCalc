@@ -12,12 +12,10 @@ function rectanglesWithPerimeter(rx, ry, peri) {
 		if (isWhole(innerH) && (innerH > 0)) {
 			// width * calculated height
 			const res = (
-				(rx-innerW) +
-				(ry-innerH)
+				(rx-innerW+1) *
+				(ry-innerH+1)
 			);
-
-			console.log(`Res for ${innerW} and ${innerH} is ${res}`);
-
+			
 			sum += res;
 		}
 	}
