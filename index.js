@@ -1,5 +1,4 @@
-console.log(rectanglesWithPerimeter(3, 3, 8));
-//console.log(rectanglesWithPerimeter(35,14));
+rectanglesWithPerimeter(35, 14, 30);
 
 function rectanglesWithPerimeter(rx, ry, peri) {
 	let sum = 0;
@@ -15,10 +14,15 @@ function rectanglesWithPerimeter(rx, ry, peri) {
 				(rx-innerW+1) *
 				(ry-innerH+1)
 			);
-			
+
+			console.log(`Number of ${innerW}x${innerH}\trectangles inside:\t${res}`);
+
 			sum += res;
 		}
 	}
+
+	console.log("----------------------------------------------");
+	console.log("Total:\t\t\t\t\t" + sum);
 
 	return sum;
 }
