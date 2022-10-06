@@ -1,4 +1,4 @@
-rectanglesWithPerimeter(35, 14, 30);
+rectanglesWithPerimeter(35, 14, 50);
 
 function rectanglesWithPerimeter(rx, ry, peri) {
 	let sum = 0;
@@ -10,10 +10,12 @@ function rectanglesWithPerimeter(rx, ry, peri) {
 		// Skip to next if height can't be found
 		if (isWhole(innerH) && (innerH > 0)) {
 			// width * calculated height
-			const res = (
+			let res = (
 				(rx-innerW+1) *
 				(ry-innerH+1)
 			);
+
+			if (res < 0) continue;
 
 			console.log(`Number of ${innerW}x${innerH}\trectangles inside:\t${res}`);
 
