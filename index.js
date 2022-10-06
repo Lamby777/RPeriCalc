@@ -1,4 +1,4 @@
-rectanglesWithPerimeter(35, 14, 50);
+rectanglesWithPerimeter(35, 14, 30);
 
 function rectanglesWithPerimeter(rx, ry, peri) {
 	let sum = 0;
@@ -17,7 +17,7 @@ function rectanglesWithPerimeter(rx, ry, peri) {
 
 			if (res < 0) continue;
 
-			console.log(`Number of ${innerW}x${innerH}\trectangles inside:\t${res}`);
+			console.log(`Number of ${innerW}x${innerH}\trectangles inside:\t${res},\teach with area ${innerW*innerH}`);
 
 			sum += res;
 		}
